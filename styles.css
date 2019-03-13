@@ -11,6 +11,20 @@ main{
 	padding: 1rem;
 }
 
-.input{
+.fitdist{
+	text-align: right;
+}
 
+.restart{
+	text-align: left;
+}
+
+@media only screen and (max-width: 900px),(max-height: 400px){
+	.fitdist{
+		text-align: center;
+	}
+
+	.restart{
+		text-align: center;
+	}
 }

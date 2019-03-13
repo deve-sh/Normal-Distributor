@@ -3,6 +3,10 @@
 <head>
 	<title>Normal Fitting and Approximation</title>
 
+	<!-- META -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles.css">
@@ -11,9 +15,8 @@
 	<!-- ADD BODY HERE -->
 	<main>
 		<form onsubmit="setup(event)">
-			<input type="number" name="number" class="form-control" id='numberofobs' min='1' required placeholder="Number of Classes" /><br>
-			<input type="checkbox" id="grouped" style="vertical-align: middle;" name="grouped"> <label for="grouped">Grouped?</label>
-			<br><br>
+			<input type="number" name="number" class="form-control" id='numberofobs' min='1' required placeholder="Number of Classes" />
+			<br>
 			<button type="submit" class="btn btn-primary">Show Input Tables</button>
 		</form>
 		<div id="inputs">

@@ -16,6 +16,8 @@ function sum(arr=[]){
 	return sum;		// Sum can be zero. No doubt.
 }
 
+const abs = num => (num<0)?0-num:num;	// Absolute / Modulus Function
+
 // Function to find the mean of Grouped data.
 
 function mean(arr=[],freq=[]){	// Parameter to be passed => An array
