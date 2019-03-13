@@ -97,7 +97,7 @@ function normalcdf(X){   //HASTINGS.  MAX ERROR = .000001 Thanks to : http://www
 	}
 	Prob=Math.round(100000*Prob)/100000;
 	return Prob;
-} 
+}
 
 function pnorm(point=0,mean=0,sd=1){	
 	// Assuming the distribution to be a Standard Normal One if nothing is passed.
