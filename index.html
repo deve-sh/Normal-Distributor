@@ -14,10 +14,11 @@
 <body class="container-fluid">
 	<!-- ADD BODY HERE -->
 	<main>
-		<form onsubmit="setup(event)">
-			<input type="number" name="number" class="form-control" id='numberofobs' min='2' required placeholder="Number of Classes" />
+		<h2 class="introtext">Normal Distribution Fitting</h2>
+		<form onsubmit="setup(event)" class="row" style="padding: 1rem;">
+			<input type="number" name="number" class="form-control col-md-9" id='numberofobs' min='2' required placeholder="Number of Classes" />
 			<br>
-			<button type="submit" class="btn btn-primary">Show Input Tables</button>
+			<div align="center" style="padding: 0.2rem" class="col-md-3"><button type="submit" class="btn btn-primary">Show Input Tables</button></div>
 		</form>
 		<div id="inputs">
 

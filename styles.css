@@ -1,14 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 *{
 	box-sizing: border-box;
 }
 
 body{
 	margin: 0;
+	font-family: 'Montserrat',sans-serif;
+	padding: 0;
+	font-size: 1em;
+}
+
+.btn{
+	font-family: 0.85em;
+}
+
+.container-fluid{
+	margin: 0;
 	padding: 0;
 }
 
 main{
+	border-left: 0.5rem solid #343a40;
 	padding: 1rem;
+	min-height: 100vh;
 }
 
 .fitdist{
@@ -30,5 +45,15 @@ main{
 
 	.restart{
 		text-align: center;
+	}
+
+	.introtext{
+		font-size: 1.8em;
+	}
+}
+
+@media only screen and (max-width: 600px),(max-height: 300px){
+	.introtext{
+		font-size: 1.5em;
 	}
 }

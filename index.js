@@ -1,5 +1,5 @@
 /*
-	Main File Pertaining to all the Front End Displaying Stuff.
+	Main File Pertaining to all the Front End Presentation Stuff.
 */
 
 function setup(e){	// Function to setup the input fields.
@@ -9,6 +9,8 @@ function setup(e){	// Function to setup the input fields.
 	let number = document.getElementById('numberofobs').value;
 
 	if(number && number>0){
+
+			document.getElementById('outputs').innerHTML="";	// Clearing previous outputs.
 
 			// If data is grouped.
 
@@ -30,11 +32,11 @@ function setup(e){	// Function to setup the input fields.
 			}
 
 			htmlstring += `</div><br>
-			<div class='col-md-6 fitdist'>
+			<div class='col-md-6 fitdist' style='padding: 0.5rem'>
 				<button type='submit' onclick='formfit(event,${number})' class='btn btn-primary'>Fit Distribution</button>
 			</div>
-			<div class='col-md-6 restart'>
-				<button type='clear' onclick='clear();' class='btn btn-danger'>Restart</button>
+			<div class='col-md-6 restart' style='padding: 0.5rem'>
+				<button onclick='clearterms()' class='btn btn-danger'>Restart</button>
 			</div>
 			</form>`;
 
@@ -175,9 +177,9 @@ function formfit(e,number = 5){	// Function to fit the Normal Distributions.
 			<th>Total</th>
 			<td></td>
 			<td></td>
-			<td>${sum(areas)}</td>
-			<td>${sum(probs)}</td>
-			<td>${sum(expecs)}</td>
+			<td>${Math.round(sum(areas)*100000)/100000}</td>
+			<td>${Math.round(sum(probs)*100000)/100000}</td>
+			<td>${Math.round(sum(expecs)*100000)/100000}</td>
 	</tr>`;
 
 
@@ -193,8 +195,8 @@ function formfit(e,number = 5){	// Function to fit the Normal Distributions.
 	document.getElementById('outputs').innerHTML = newhtmlstring;
 }
 
-function clear(){		// Function to empty a DOM element.
-	document.getElementById("outputs").innerHTML="";
-	document.getElementById("inputs").innerHTML="";
-	document.getElementById("numberofobs").value="";
+function clearterms(){		// Function to empty a DOM element.
+	document.getElementById("outputs").innerHTML = "";
+	document.getElementById("inputs").innerHTML  = "";
+	document.getElementById("numberofobs").value = "";
 }

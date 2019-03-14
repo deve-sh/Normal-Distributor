@@ -1,6 +1,6 @@
 /*
 	JavaScript File Pertaining to Normal Distribution Fitting.
-
+	Origin : https://github.com/deve-sh/Normal-Distributor.git
 	Coming to Python Soon enough.
 */
 
