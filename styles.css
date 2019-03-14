@@ -26,6 +26,14 @@ main{
 	min-height: 100vh;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
 .fitdist{
 	text-align: right;
 }
@@ -37,6 +45,8 @@ main{
 .outputtable td,th{
 	padding: 1rem;
 }
+
+/* Media Queries */
 
 @media only screen and (max-width: 900px),(max-height: 400px){
 	.fitdist{
