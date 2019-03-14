@@ -2,6 +2,8 @@
 
 This is a JavaScript project that allows you to provide it with a sample dataset and form a Normal Distribution out of it.
 
+[See it in Action Here!](https://deve-sh.github.io/Normal-Distributor)
+
 ## Installation
 
 Installation is simple. Just download the Repository or clone it on your computer, using the following command on the command line : 
