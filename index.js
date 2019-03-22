@@ -22,7 +22,7 @@ function setup(e){	// Function to setup the input fields.
 				htmlstring += `<input type='text' class='form-control input cla-${i}' placeholder='Class ${i+1}'><br/><br/>`;	// Observation Inputs
 			}
 
-			htmlstring += `</div>`;
+			htmlstring += `<div onclick='autocomplete(${number})' class='btn btn-info'>Auto Complete</div><br><br></div>`;
 
 			htmlstring += `<div class='frequencies col-md-6'>
 			<h3 class='freqheader'>Frequencies</h3><br/>`;
@@ -33,7 +33,6 @@ function setup(e){	// Function to setup the input fields.
 
 			htmlstring += `</div><br>
 			<div class='col-md-6 fitdist' style='padding: 0.5rem'>
-				<div onclick='autocomplete(${number})' class='btn btn-info'>Auto Complete</div>
 				<button type='submit' onclick='formfit(event,${number})' class='btn btn-primary'>Fit Distribution</button>
 			</div>
 			<div class='col-md-6 restart' style='padding: 0.5rem'>
