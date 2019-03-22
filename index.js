@@ -33,6 +33,7 @@ function setup(e){	// Function to setup the input fields.
 
 			htmlstring += `</div><br>
 			<div class='col-md-6 fitdist' style='padding: 0.5rem'>
+				<div onclick='autocomplete(${number})' class='btn btn-info'>Auto Complete</div>
 				<button type='submit' onclick='formfit(event,${number})' class='btn btn-primary'>Fit Distribution</button>
 			</div>
 			<div class='col-md-6 restart' style='padding: 0.5rem'>
@@ -45,6 +46,49 @@ function setup(e){	// Function to setup the input fields.
 	else{
 		document.getElementById('inputs').style.display = "block";
 		document.getElementById('inputs').innerHTML = "<div align='center' class='alert alert-danger'>Kindly Enter Valid Inputs.</div>";
+	}
+}
+
+function autocomplete(nclasses=5){	// Function to autocomplete the class fields.
+	if(document.getElementById('inputs').innerHTML !== "" && (document.getElementById('inputs').style.display !== "" || document.getElementById('inputs').style.display!=='none')){
+		// If the user actually initialized the fitting process.
+
+		if(document.getElementsByClassName('cla-0')[0].value !== ''){
+
+			// If the user infact entered the first class.
+
+			let firstclass = document.getElementsByClassName('cla-0')[0].value.split('-');
+			
+
+			// Error Checking
+
+			let start = Number(firstclass[0]), end = Number(firstclass[1]);
+
+			if(isNaN(start) || isNaN(end)){		// If the user didn't enter something like a string.
+				document.getElementById('outputs').style.display = "block";
+				document.getElementById('outputs').innerHTML = "<div align='center' class='alert alert-danger'>Could not compute difference.</div>";
+				throw new Error("Could not compute difference!");
+			}
+
+			let diff = end - start;
+
+			for(let count = 1;count<nclasses; count++){		// Loop to insert the values inside.
+				start = end;
+				end = start + diff;
+
+				document.getElementsByClassName(`cla-${count}`)[0].value = `${start} - ${end}`;
+			}
+
+			document.getElementById('outputs').innerHTML = "";
+		}
+		else{
+			document.getElementById('inputs').style.display = "block";
+			document.getElementById('inputs').innerHTML = "<div align='center' class='alert alert-danger'>Kindly Enter Values of Classes.</div>";
+		}
+	}
+	else{
+		document.getElementById('inputs').style.display = "block";
+		document.getElementById('inputs').innerHTML = "<div align='center' class='alert alert-danger'>Kindly Enter Number of Classes.</div>";
 	}
 }
 
