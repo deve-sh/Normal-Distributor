@@ -21,7 +21,7 @@ body{
 }
 
 main{
-	border-left: 0.5rem solid #343a40;
+	border-top: 0.5rem solid #343a40;
 	padding: 1rem;
 	min-height: 100vh;
 }
